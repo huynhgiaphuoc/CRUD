@@ -1,0 +1,82 @@
+﻿@model Jewelly.Models.CartList
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<div class="container _cartlisstdis">
+    <form action="/Admin/CardList/Edit/@Model.ID" method="post">
+        <input type="hidden" value="@Model.ID" name="ID"/>
+        <div>
+            <div>
+                <h2>Cart List</h2>
+            </div>
+            <div class="form_edit_">
+                <div class="row">
+                    <div class="col-sm-6 c">
+                        <div class="space_input_login">
+                            <label>Name</label>
+                            <input class="input_edits form-control txt--input" type="text" value="@Model.Product_Name" name="Product_Name" />
+                        </div>
+                        <div class="space_input_login">
+                            <label>MRP</label>
+                            <input class="input_edits form-control txt--input" type="text" value="@Model.MRP" name="MRP" />
+                        </div>
+                        <div class="space_input_login">
+                            <label>Email</label>
+                            <input class="input_edits form-control txt--input" type="text" value="@Model.Email_ID" name="Email_ID" />
+                        </div>
+                        <div class="space_input_login">
+                            <label>Order Date</label>
+                            <input class="input_edits form-control txt--input" type="text" value="@Model.OrderDate" name="OrderDate" />
+                        </div>
+                        <div class="space_input_login">
+                            <label>Ship Name</label>
+                            <input class="input_edits form-control txt--input" type="text" value="@Model.ShipName" name="ShipName" />
+                        </div>
+                        <div class="space_input_login">
+                            <label>Ship Address</label>
+                            <input class="input_edits form-control txt--input" type="text" value="@Model.ShipAddress" name="ShipAddress" />
+                        </div>
+                        <div class="space_input_login">
+                            <label>Order Code</label>
+                            <input class="input_edits form-control txt--input" type="text" value="@Model.OrderCode" name="OrderCode" />
+                        </div>
+                    </div>
+                    <div class="col-sm-6 dis_edit">
+
+                        <div class="space_input_login">
+                            <label>Ship City</label>
+                            <input class="input_edits form-control txt--input" type="text" value="@Model.ShipCity" name="ShipCity" />
+                        </div>
+                        <div class="space_input_login">
+                            <label>Ship Code</label>
+                            <input class="input_edits form-control txt--input" type="text" value="@Model.ShipCode" name="ShipCode" />
+                        </div>
+                        <div class="space_input_login">
+                            <label>Ship Country</label>
+                            <input class="input_edits form-control txt--input" type="text" value="@Model.ShipCountry" name="ShipCountry" />
+                        </div>
+                        <div class="space_input_login">
+                            <label>Admin</label>
+                            <input class="input_edits form-control txt--input" type="text" value="@Model.userName" />
+                        </div>
+                        <div class="space_input_login">
+                            <label>Userid</label>
+                            <input class="input_edits form-control txt--input" type="text" value="@Model.userID" />
+                        </div>
+                        <div class="space_input_login">
+                            <label>Payment</label>
+                            <input class="input_edits form-control txt--input" type="text" value="@Model.payment_ID" />
+                        </div>
+                    </div>
+                </div>
+              
+                <div>
+                    <button type="submit" class="btn--dark--model btn--login mt-3" >Edit</button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>

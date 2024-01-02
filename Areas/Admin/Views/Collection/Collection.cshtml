@@ -1,0 +1,159 @@
+﻿@model List<Jewelly.Models.Collection>
+@{
+    ViewBag.Title = "Collection";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+<div>
+    <div class="row">
+            <div class="statistics_reneuve col">
+                <div class="start_i_order">
+                    <p class="title_reneuve">Reneuve</p>
+                    <p class="para_bgcl">Today</p>
+                </div>
+                <div class="dis_range_">
+                    <p>450,00$</p>
+                    <span>60%</span>
+                    <div class="edit_dis_statis">
+                        <div class="range_edit_dis">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="statistics_reneuve col">
+                <div class="start_i_order">
+                    <p class="title_reneuve">Reneuve</p>
+                    <p class="para_bgcl">Today</p>
+                </div>
+                <div class="dis_range_">
+                    <p>450,00$</p>
+                    <span>60%</span>
+                    <div class="edit_dis_statis">
+                        <div class="range_edit_dis">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="statistics_reneuve col">
+                <div class="start_i_order">
+                    <p class="title_reneuve">Reneuve</p>
+                    <p class="para_bgcl">Today</p>
+                </div>
+                <div class="dis_range_">
+                    <p>450,00$</p>
+                    <span>60%</span>
+                    <div class="edit_dis_statis">
+                        <div class="range_edit_dis">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="statistics_reneuve col">
+                <div class="start_i_order">
+                    <p class="title_reneuve">Reneuve</p>
+                    <p class="para_bgcl">Today</p>
+                </div>
+                <div class="dis_range_">
+                    <p>450,00$</p>
+                    <span>60%</span>
+                    <div class="edit_dis_statis">
+                        <div class="range_edit_dis">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="chart_">
+                <canvas id="order" height="400" width="600"></canvas>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="chart_">
+                <canvas id="total" height="400" width="600"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="chart_">
+                <canvas id="profit" height="400" width="600"></canvas>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="chart_">
+                <canvas id="country" height="400" width="600"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        @if (ViewBag.SuccessMg != null)
+        {
+            <div id="msgAlert" style="margin-left: 3em;" class="alert alert-success">
+                @ViewBag.SuccessMg
+            </div>
+        }
+        else if (ViewBag.ErrorMg != null)
+        {
+            <div id="msgsAlert" style="margin-left: 3em;" class="alert alert-danger">
+                @ViewBag.ErrorMg
+            </div>
+        }
+
+
+
+    </div>
+    <div>
+        <form action="/Admin/Payment/Payment" method="post">
+            <input class="form-control" width="200px" type="text" placeholder="Type Name" name="search">
+            <button class="btn btn-dark" type="submit"><i class="fa-solid fa-magnifying-glass "></i></button>
+
+        </form>
+    </div>
+    <div class="container _cartlisstdis">
+
+        <table class="table">
+            <thead>
+            <th>Type</th>
+            <th>Number Card</th>
+            <th>CGV</th>
+            <th>Expiration date</th>
+            <th>Edit</th>
+            <th>Delete</th>
+
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.collection_ID</td>
+
+                        <td>@item.CGmail</td>
+
+
+                        <td><a href="/Admin/Collection/Edit/@item.collection_ID" class="btn btn-success">Edit</a></td>
+                        <td><a href="/Admin/Collection/Delete/@item.collection_ID" class="btn btn-danger">Delete</a></td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+
+    </div>
+</div>
+<script src="~/Areas/Admin/Content/Script/chart.js"></script>
+<script>
+    setTimeout(function () {
+        $('#msgAlert').fadeOut('slow');
+        $('#msgsAlert').fadeOut('slow');
+    }, 4000);
+</script>
+

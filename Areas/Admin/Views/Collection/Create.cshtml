@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<div class="container _cartlisstdis">
+    <form action="/Admin/Collection/Create" method="post">
+        <div class="contain_form">
+            <div>
+                <h2>Cart List</h2>
+            </div>
+
+            <div class="form_edit_">
+                <div class="space_input_login">
+                    <label>CG Gmail</label>
+                    <input class="input_edits form-control txt--input" type="text" name="CGmail" />
+                </div>
+                
+                <div>
+                    <button type="submit" class="btn--dark--model btn--login mt-3 edit_btn_l">Create</button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>

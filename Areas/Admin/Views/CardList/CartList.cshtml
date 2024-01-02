@@ -1,0 +1,177 @@
+﻿@model  List<Jewelly.Models.CartList>
+@{
+    ViewBag.Title = "CartList";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+<div>
+    <div class="row">
+        <div class="statistics_reneuve col">
+            <div class="start_i_order">
+                <p class="title_reneuve">Reneuve</p>
+                <p class="para_bgcl">Today</p>
+            </div>
+            <div class="dis_range_">
+                <p>450,00$</p>
+                <span>60%</span>
+                <div class="edit_dis_statis">
+                    <div class="range_edit_dis">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="statistics_reneuve col">
+            <div class="start_i_order">
+                <p class="title_reneuve">Reneuve</p>
+                <p class="para_bgcl">Today</p>
+            </div>
+            <div class="dis_range_">
+                <p>450,00$</p>
+                <span>60%</span>
+                <div class="edit_dis_statis">
+                    <div class="range_edit_dis">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="statistics_reneuve col">
+            <div class="start_i_order">
+                <p class="title_reneuve">Reneuve</p>
+                <p class="para_bgcl">Today</p>
+            </div>
+            <div class="dis_range_">
+                <p>450,00$</p>
+                <span>60%</span>
+                <div class="edit_dis_statis">
+                    <div class="range_edit_dis">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="statistics_reneuve col">
+            <div class="start_i_order">
+                <p class="title_reneuve">Reneuve</p>
+                <p class="para_bgcl">Today</p>
+            </div>
+            <div class="dis_range_">
+                <p>450,00$</p>
+                <span>60%</span>
+                <div class="edit_dis_statis">
+                    <div class="range_edit_dis">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="chart_">
+                <canvas id="order" height="400" width="600"></canvas>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="chart_">
+                <canvas id="total" height="400" width="600"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="chart_">
+                <canvas id="profit" height="400" width="600"></canvas>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="chart_">
+                <canvas id="country" height="400" width="600"></canvas>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        @if (ViewBag.SuccessMg != null)
+        {
+            <div id="msgAlert" style="margin-left: 3em;" class="alert alert-success">
+                @ViewBag.SuccessMg
+            </div>
+        }
+        else if (ViewBag.ErrorMg != null)
+        {
+            <div id="msgsAlert" style="margin-left: 3em;" class="alert alert-danger">
+                @ViewBag.ErrorMg
+            </div>
+        }
+
+
+
+    </div> 
+    <div class="contain_insearch">
+        <form action="/Admin/CardList/CartList" method="post">
+            <input class="search_form"  type="text" placeholder="Product Name" name="search">
+            <button class="btn btn-dark" type="submit"><i class="fa-solid fa-magnifying-glass "></i></button>
+
+        </form>
+    </div>
+
+    <div class="container _cartlisstdis">
+
+        <table class="table">
+            <thead>
+            <th>Product Name</th>
+            <th>MRP</th>
+            <th>Email</th>
+            <th>Order date</th>
+            <th>Ship Name</th>
+            <th>Ship Address</th>
+            <th>Order Code</th>
+            <th>Ship City</th>
+            <th>Ship Code</th>
+            <th>Account Order</th>
+            <th>Account receive order</th>
+            <th>Payment method</th>
+            <th>Edit</th>
+            <th>Delete</th>
+
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Product_Name</td>
+                        <td>@item.MRP</td>
+                        <td>@item.Email_ID/td>
+                        <td>@item.OrderDate</td>
+                        <td>@item.ShipName</td>
+                        <td>@item.ShipAddress</td>
+                        <td>@item.OrderCode</td>
+                        <td>@item.ShipCity</td>
+                        <td>@item.ShipCode</td>
+                        @*<td>@item.UserRegMst.userFname@item.UserRegMst.userLname</td>
+                        <td>@item.AdminLoginMst.userName</td>*@
+                        <td>@item.userName</td>
+                        <td><a href="/Admin/CardList/Edit/@item.ID" class="btn btn-success">Edit</a></td>
+                        <td><a href="/Admin/CardList/Delete/@item.ID" class="btn btn-danger">Delete</a></td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+
+
+    </div>
+</div>
+
+    <script src="~/Areas/Admin/Content/Script/chart.js"></script>
+
+<script>
+    setTimeout(function () {
+        $('#msgAlert').fadeOut('slow');
+        $('#msgsAlert').fadeOut('slow');
+    }, 2000);
+    console.log()
+</script>

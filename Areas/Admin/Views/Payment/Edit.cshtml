@@ -1,0 +1,39 @@
+﻿@model Jewelly.Models.Payment
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutPageAdmin.cshtml";
+}
+
+<div class="container _cartlisstdis">
+    <form action="/Admin/Payment/Edit/@Model.ID" method="post">
+        <input type="hidden" name="ID" value="@Model.ID" />
+        <div class="contain_form">
+            <div>
+                <h2>Cart List</h2>
+            </div>
+
+            <div class="form_edit_">
+                <div class="space_input_login">
+                    <label>Type</label>
+                    <input class="input_edits form-control txt--input" type="text" name="type" value="@Model.type"/>
+                </div>
+                <div class="space_input_login">
+                    <label>Number Card</label>
+                    <input class="input_edits form-control txt--input" type="text" name="numbercard" value="@Model.numbercard" />
+                </div>
+                <div class="space_input_login">
+                    <label>CGV</label>
+                    <input class="input_edits form-control txt--input" type="text" name="cgv" value="@Model.cgv"/>
+                </div>
+                <div class="space_input_login">
+                    <label>Expiration</label>
+                    <input class="input_edits form-control txt--input" type="date" name="expiration_date" value="@Model.expiration_date" />
+                </div>
+                <div>
+                    <button type="submit" class="btn--dark--model btn--login mt-3 edit_btn_l">Edit</button>
+                </div>
+            </div>
+        </div>
+
+    </form>
+</div>
