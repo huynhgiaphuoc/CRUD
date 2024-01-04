@@ -23,14 +23,14 @@
         </div>
         <div class="statistics_reneuve col">
             <div class="start_i_order">
-                <p class="title_reneuve">Reneuve</p>
-                <p class="para_bgcl">Today</p>
+                <p class="title_reneuve">Order</p>
+                <p class="para_bgcl1">Today</p>
             </div>
-            <div class="dis_range_">
+            <div class="dis_range_1">
                 <p>450,00$</p>
                 <span>60%</span>
-                <div class="edit_dis_statis">
-                    <div class="range_edit_dis">
+                <div class="edit_dis_statis_1">
+                    <div class="range_edit_dis_1">
                     </div>
                 </div>
             </div>
@@ -38,14 +38,14 @@
         </div>
         <div class="statistics_reneuve col">
             <div class="start_i_order">
-                <p class="title_reneuve">Reneuve</p>
-                <p class="para_bgcl">Today</p>
+                <p class="title_reneuve">Profit</p>
+                <p class="para_bgcl2">Today</p>
             </div>
             <div class="dis_range_">
                 <p>450,00$</p>
                 <span>60%</span>
-                <div class="edit_dis_statis">
-                    <div class="range_edit_dis">
+                <div class="edit_dis_statis_2">
+                    <div class="range_edit_dis_2">
                     </div>
                 </div>
             </div>
@@ -53,23 +53,21 @@
         </div>
         <div class="statistics_reneuve col">
             <div class="start_i_order">
-                <p class="title_reneuve">Reneuve</p>
-                <p class="para_bgcl">Today</p>
+                <p class="title_reneuve">Place Order</p>
+                <p class="para_bgcl3">Today</p>
             </div>
-            <div class="dis_range_">
+            <div class="dis_range_3">
                 <p>450,00$</p>
                 <span>60%</span>
-                <div class="edit_dis_statis">
-                    <div class="range_edit_dis">
+                <div class="edit_dis_statis_3">
+                    <div class="range_edit_dis_3">
                     </div>
                 </div>
             </div>
 
         </div>
-
-
-
     </div>
+
 
     <div class="row">
         <div class="col-md-6">
@@ -120,10 +118,9 @@
 
     <div class="container _cartlisstdis">
 
-        <table class="table">
+        <table class="table edit_colr">
             <thead>
-            <th>ID</th>
-            <th>Style</th>
+            <th>Product Name</th>
             <th>Unit Price</th>
             <th>Quantity</th>
             <th>Order</th>
@@ -137,7 +134,7 @@
                     <tr>
                         <td>@item.ItemMst.ProdMst.Prod_Type</td>
                         <td>@item.UnitPrice
-                        <td>
+                        </td>
                         <td>@item.Quantity</td>
                         <td>@item.ID</td>
                         <td><a href="/Admin/Orderdetails/Edit/@item.Orderdetails_ID" class="btn btn-success">Edit</a></td>

@@ -4,10 +4,24 @@
     Layout = "~/Areas/Admin/Views/Shared/_LayoutPageAdmin.cshtml";
 }
 
+<div class="container _cartlisstdis">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <div>
+                <label>Product Name:</label>
+                <input class="input_edits form-control txt--input" type="text" value=" @Model.OrderDetail.ItemMst.ProdMst.Prod_Type" name="Product_Name" />
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+ 
+
+</div>
 <div class="form-group">
     <select>
         <option>
-            @Model.OrderDetail.ItemMst.ProdMst.Prod_Type
+           
         </option>
     </select>
     @*@Html.LabelFor(model => model.OrderDetail.ItemMst.ProdMst.Prod_ID, "Product")

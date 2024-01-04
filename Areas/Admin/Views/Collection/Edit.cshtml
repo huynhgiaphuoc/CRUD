@@ -6,24 +6,38 @@
 
 <div class="container _cartlisstdis">
     <form action="/Admin/Collection/Edit/@Model.collection_ID" method="post">
-        <input type="hidden" name="collection_ID" value="@Model.collection_ID" />
-        <div class="contain_form">
-            <div>
-                <h2>Cart List</h2>
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+
+                <input type="hidden" name="collection_ID" value="@Model.collection_ID" />
+                <div class="contain_form" style="text-align: center;">
+                    <div>
+                        <h2>Cart List</h2>
+                    </div>
+
+                    <div class="form_edit_">
+                        <div class="space_input_login">
+                            <label>Type</label>
+                            <input class="input_edits form-control txt--input" type="text" name="CGmail" value="@Model.CGmail" />
+                        </div>
+
+                    </div>
+                </div>
+
+
             </div>
 
-            <div class="form_edit_">
-                <div class="space_input_login">
-                    <label>Type</label>
-                    <input class="input_edits form-control txt--input" type="text" name="CGmail" value="@Model.CGmail" />
-                </div>
-               
-                <div>
-                    <button type="submit" class="btn--dark--model btn--login mt-3 edit_btn_l">Edit</button>
-                </div>
-            </div>
+            <div class="col-sm-2"></div>
+
         </div>
-
+        <div class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <button type="submit" class="btn--dark--model btn--login mt-3 edit_btn_l">Edit</button>
+            </div>
+           
+        </div>
     </form>
 </div>
 

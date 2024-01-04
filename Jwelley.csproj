@@ -373,6 +373,7 @@
     <Content Include="Views\News\Preverse.cshtml" />
     <Content Include="Views\Home\Introduction.cshtml" />
     <Content Include="Views\Home\Natural.cshtml" />
+    <Content Include="Views\Account\myPurchar.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

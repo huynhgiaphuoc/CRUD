@@ -208,6 +208,10 @@ namespace Jewelly.Controllers
 
             }
         }
+     public ActionResult myPurchar()
+        {
+            return View();
+        }
         public ActionResult Logout()
         {
             Session.Clear();//remove session
